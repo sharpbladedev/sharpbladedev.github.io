@@ -18,7 +18,6 @@ authors:
     display_name: Pavle
     gravatar: e56154546cf4be74e393c62d1ae9f9d4
     email: radomanp@gmail.com
-    web: https://www.wowthemes.net
     description: "Autor bloga i instagram stranice - Putovanja za svakoga. Putnik. Avanturista. Entuzijasta."
 
 # Plugins
@@ -43,6 +42,7 @@ paginate_path: /page:num/
     
 # Other
 markdown: kramdown
+remote_theme: wowthemesnet/mediumish-theme-jekyll
 
 kramdown:
   input: GFM
