@@ -50,6 +50,8 @@ post_class: post-template
             <!-- End Adsense -->
 
             <!-- Post Featured Image -->
+            <div id="featureImageContainer" class="row">
+                <div class="col-6">
             {% if page.image %}
 
             {% if site.lazyimages == "enabled" %}
@@ -58,7 +60,19 @@ post_class: post-template
             <img class="featured-image img-fluid" src="{% if page.image contains "://" %}{{ page.image }}{% else %}{{ site.baseurl }}/{{ page.image }}{% endif %}" alt="{{ page.title }}">
             {% endif %}
 
+
             {% endif %}
+                </div>
+                <div class="col-6" style="margin: 0 auto; text-align: center">
+                    <h1>REZERVIŠI</h1>
+                    <p>
+                        <a class="btn btn-success" style="margin: 0 auto" href="{{page.agoda_url}}"
+ role="button" target="_blank">Smeštaj</a>
+
+<a class="btn btn-primary" target="_blank" href="{{page.kiwi_url}}" role="button">Avio Karta</a>
+                    </p>
+                </div>
+            </div>
             <!-- End Featured Image -->
 
             <!-- Post Content -->
@@ -75,6 +89,14 @@ post_class: post-template
                 {% endif %}
                 <!-- End Toc -->
                 {{content}}
+                <h1>Rezervacija</h1>
+                    <p>
+                        <a class="btn btn-success" style="margin: 0 auto" href="{{page.agoda_url}}"
+ role="button" target="_blank">Smeštaj</a>
+
+<a class="btn btn-primary" target="_blank" href="{{page.kiwi_url}}" role="button">Avio Karta</a>
+                    </p>
+                <sub>*Napomena: Blog i Instagram su neprofitne stranice, razlikujemo se od ostalih po tome sto se u Vaša putovanja ne ugrađujemo na bilo kakav način. Mi smo tu da pronađemo za Vas, a na Vama je da bukirate. :)*</sub>
             </div>
 
             <!-- Rating -->
@@ -87,7 +109,7 @@ post_class: post-template
             <!-- Post Date -->
             <p>
             <small>
-                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>           
+                <span class="post-date"><time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time></span>
                 {% if page.last_modified_at %}
                 (Updated: <time datetime="{{ page.last_modified_at | date_to_xmlschema }}" itemprop="dateModified">{{ page.last_modified_at | date: "%b %-d, %Y" }}</time>)
                 {% endif %}
